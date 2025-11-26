@@ -5,6 +5,7 @@ import { BaseCrudService } from '@/integrations';
 import { Projects, ProjectGalleryImages } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Home, Grid3x3 } from 'lucide-react';
+import { useDynamicTheme } from '@/hooks/useDynamicTheme';
 
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -38,6 +39,15 @@ export default function ProjectDetailPage() {
     };
     fetchProject();
   }, [id]);
+
+  const heroImage =
+    project?.thumbnailImage ||
+    project?.detailImage1 ||
+    project?.detailImage2 ||
+    project?.detailImage3 ||
+    galleryImages[0]?.imageFile;
+
+  useDynamicTheme(heroImage);
 
   if (!project) {
     return (

@@ -19,20 +19,20 @@ export default {
                 '9xl': ['8rem', { lineHeight: '1', letterSpacing: '0.06em', fontWeight: '900' }],
             },
             fontFamily: {
-                heading: "rubik-v2",
-                paragraph: "rubik-v2"
+                heading: ['"Space Grotesk"', '"Manrope"', 'system-ui', 'sans-serif'],
+                paragraph: ['"Manrope"', 'system-ui', 'sans-serif']
             },
             colors: {
-                accentneongreen: '#3EFFB8',
-                accentpeach: '#FFCCB3',
-                foreground: '#E9ECE7',
+                accentneongreen: 'var(--accent)',
+                accentpeach: 'var(--accent-2)',
+                foreground: 'var(--foreground)',
                 destructive: '#DF3131',
                 destructiveforeground: '#ffffff',
-                background: '#060606',
-                secondary: '#0F1012',
-                'secondary-foreground': '#E9ECE7',
-                'primary-foreground': '#F7F7F2',
-                primary: '#050505'
+                background: 'var(--background)',
+                secondary: 'var(--surface)',
+                'secondary-foreground': 'var(--foreground)',
+                'primary-foreground': 'var(--primary-foreground)',
+                primary: 'var(--background)'
             },
         },
     },
