@@ -1,0 +1,74 @@
+{
+  "name": "wixstro",
+  "type": "module",
+  "version": "1.0.0",
+
+  "scripts": {
+    "dev": "wix dev",
+    "build": "wix build",
+    "preview": "wix preview",
+    "release": "wix release",
+    "env": "wix env pull",
+    "check": "npx astro check --js-only",
+    "test:run": "vitest run"
+  },
+
+  "dependencies": {
+    /* --- Core Framework --- */
+    "astro": "^5.8.0",
+    "@astrojs/react": "^4.2.3",
+    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/cloudflare": "~12.5.3",
+
+    /* --- React + UI --- */
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.4.1",
+    "framer-motion": "^12.5.0",
+    "lucide-react": "^0.487.0",
+
+    /* --- Tailwind Plugins --- */
+    "tailwindcss": "^3.4.14",
+    "tailwindcss-animate": "^1.0.7",
+    "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/vite": "^4.0.13",
+
+    /* --- Wix Essentials (Only Needed Ones) --- */
+    "@wix/astro": "2.10.0",
+    "@wix/sdk": "^1.15.23",
+    "@wix/seo": "^1.0.27",
+    "@wix/image": "^1.392.0",
+    "@wix/members": "^1.0.304",
+    "@wix/wix-vibe-plugins": "0.0.1",
+    "@wix/services-manager-react": "^0.1.27",
+    "@wix/services-manager": "^0.2.21",
+
+    /* --- Useful Utilities --- */
+    "clsx": "^2.1.1",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.4",
+    "zustand": "^5.0.6"
+  },
+
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+
+    "typescript": "^5.8.3",
+    "vite": "^4.5.0",
+    "vite-tsconfig-paths": "^5.1.4",
+
+    "eslint": "^9.26.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-import": "^2.31.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+
+    "vitest": "3.1.4",
+    "jsdom": "^20.0.0",
+
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/jest-dom": "^5.16.5"
+  }
+}

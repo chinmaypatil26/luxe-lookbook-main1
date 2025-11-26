@@ -1,0 +1,43 @@
+---
+import { SEO } from '@wix/seo/components';
+import { loadSEOTagsServiceConfig } from '@wix/seo/services';
+import { Head } from "@/components/Head";
+import AppRouter from "@/components/Router";
+import "@wix/wix-vibe-plugins/plugins-vars.css";
+import "@wix/wix-vibe-plugins/plugins-theme.css";
+import "@/styles/global.css";
+
+const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
+  pageUrl: Astro.url.href,
+  itemData: {
+    pageName: 'Home',
+  },
+});
+---
+
+<html lang="en" class="w-full h-full">
+  <head>
+    <Head />
+
+    <!-- Custom Meta Enhancements -->
+    <meta name="theme-color" content="#0f0f0f" />
+    <meta name="description" content="A modern, fast portfolio built with Astro and React." />
+    <meta property="og:title" content="Portfolio | Home" />
+    <meta property="og:description" content="Explore a clean, fast, and interactive portfolio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Luxe Lookbook" />
+
+    <!-- Wix SEO -->
+    <SEO.Tags seoTagsServiceConfig={seoTagsServiceConfig} slot="seo-tags" />
+  </head>
+
+  <body class="w-full h-full bg-black text-white">
+    <noscript class="p-4 text-center text-sm opacity-70">
+      JavaScript is disabled — the interactive sections of this site won’t load.
+    </noscript>
+
+    <main id="root" class="w-full h-full opacity-0 animate-fadeIn">
+      <AppRouter client:only="react" />
+    </main>
+  </body>
+</html>
