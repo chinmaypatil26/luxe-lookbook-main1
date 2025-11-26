@@ -25,14 +25,14 @@ export default {
             colors: {
                 accentneongreen: '#3EFFB8',
                 accentpeach: '#FFCCB3',
-                foreground: '#FFFFFF',
+                foreground: '#E9ECE7',
                 destructive: '#DF3131',
                 destructiveforeground: '#ffffff',
-                background: '#F5F5F5',
-                secondary: '#E8E8E8',
-                'secondary-foreground': '#1A1A1A',
-                'primary-foreground': '#1A1A1A',
-                primary: '#F5F5F5'
+                background: '#060606',
+                secondary: '#0F1012',
+                'secondary-foreground': '#E9ECE7',
+                'primary-foreground': '#F7F7F2',
+                primary: '#050505'
             },
         },
     },
